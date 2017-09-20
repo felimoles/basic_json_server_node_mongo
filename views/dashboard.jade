@@ -1,0 +1,8 @@
+extends ./layout.jade
+block contenido
+	if	feedback
+		div.col-md-12
+			div(class="alert alert-" + type, role="alert") #{feedback}
+	div(class="col-md-12")
+		h1 ¡Hola #{name}!
+		a(href="/log_out" class="btn btn-warning") Salir

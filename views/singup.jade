@@ -1,0 +1,16 @@
+extends ./layout.jade
+block contenido
+	div(class="col-md-12")
+		a(href="/" class="btn btn-warning") Volver
+	div(class="col-md-8 col-md-offset-2")
+		form(action="/users" method="POST")
+			div(class="form-group")
+				label(for="email") E-Mail
+				input(type="text" class="form-control" id="email" name="email" email="email" placeholder="Ingrese correo electronico")
+			div(class="form-group")
+				label(for="password") Contraseña
+				input(type="password" class="form-control" id="password" name="password" placeholder="Ingrese contraseña")
+			div(class="form-group")
+				label(for="p_c") Confirmar Contraseña
+				input(type="password" class="form-control" id="p_c" name="p_c" placeholder="Reingrese contraseña")
+			button(type="submit" class="btn btn-success") Registrar

@@ -1,0 +1,6 @@
+extends ./layout.jade
+block contenido
+	div(class="col-md-12")
+		a(href="/" class="btn btn-warning") Volver
+	div(class="col-md-8 col-md-offset-2")
+		div.alert(class="alert-"+type) #{feedback}

@@ -1,0 +1,17 @@
+extends ./layout.jade
+block contenido
+	div(class="col-md-12")
+		
+	if	feedback
+		div.col-md-12
+			div(class="alert alert-" + type, role="alert") #{feedback}
+	div(class="col-md-8 col-md-offset-2")
+		form(action="/sessions" method="POST")
+			div(class="form-group")
+				label(for="email") E-Mail
+				input(type="text" class="form-control" id="email" name="email" email="email" placeholder="Ingrese correo electronico")
+			div(class="form-group")
+				label(for="password") Contraseña
+				input(type="password" class="form-control" id="password" name="password" placeholder="Ingrese contraseña")
+			button(type="submit" class="btn btn-success") Ingresar
+			a(href="/" class="btn btn-warning") Volver
